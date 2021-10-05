@@ -17,7 +17,13 @@ public class Book implements java.io.Serializable{
     public Book() {
         super();
     }
-
+    
+    public Book(String booktId, String name, Integer unitPrice) {
+        this.booktId = booktId;
+        this.name = name;
+        this.unitPrice = unitPrice;
+    }
+    
 	public String getBooktId() {
 		return booktId;
 	}
