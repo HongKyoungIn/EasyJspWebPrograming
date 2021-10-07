@@ -19,7 +19,7 @@
 		</div>
 	</div>
 	<%
-		ArrayList<Book> listOfBooks = bookDAO.getAllProducts(); 
+		ArrayList<Book> listOfBooks = bookDAO.getAllBooks(); 
 	%>
 	<div class="container">
 		<div class="col" align="left">
@@ -27,10 +27,12 @@
 				for(int i=0; i<listOfBooks.size(); i++) {
 					Book book = listOfBooks.get(i);
 			%>
-			<div class="col-lg">
+			<div class="col-md-10">
 				<h3><%=book.getName() %></h3>
 				<p><%=book.getDescription() %>
 				<p><%=book.getUnitPrice() %>원
+				<p> <a href="./book.jsp?id=<%=book.getBookId() %>"
+				class="btn btn-secondary" role="button"> 상세 정보 &raquo;</a>
 			</div>
 			<%
 				}

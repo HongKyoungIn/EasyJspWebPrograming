@@ -2,7 +2,7 @@ package dto;
 
 public class Book implements java.io.Serializable{
 	
-    private String booktId;			//도서 id
+    private String bookId;			//도서 id
     private String name; 			//도서이름
     private Integer unitPrice;		// 가격
     private String description;		//설명
@@ -18,18 +18,18 @@ public class Book implements java.io.Serializable{
         super();
     }
     
-    public Book(String booktId, String name, Integer unitPrice) {
-        this.booktId = booktId;
+    public Book(String bookId, String name, Integer unitPrice) {
+        this.bookId = bookId;
         this.name = name;
         this.unitPrice = unitPrice;
     }
     
-	public String getBooktId() {
-		return booktId;
+	public String getBookId() {
+		return bookId;
 	}
 
-	public void setBooktId(String booktId) {
-		this.booktId = booktId;
+	public void setBookId(String bookId) {
+		this.bookId = bookId;
 	}
 
 	public String getName() {
