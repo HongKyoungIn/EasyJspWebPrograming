@@ -1,7 +1,14 @@
 package dto;
 
-public class Book implements java.io.Serializable{
+import java.io.Serializable;
+
+public class Book implements Serializable{
 	
+<<<<<<< HEAD
+	private static final long serialVersionUID = -4274700572038677000L;
+	
+=======
+>>>>>>> refs/remotes/origin/master
     private String bookId;			//도서 id
     private String name; 			//도서이름
     private Integer unitPrice;		// 가격

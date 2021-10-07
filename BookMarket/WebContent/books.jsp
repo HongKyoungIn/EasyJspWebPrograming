@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap.min.css?ver=1">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width", initial-scale="1">
 <title>도서 목록</title>
@@ -22,17 +22,28 @@
 		ArrayList<Book> listOfBooks = bookDAO.getAllBooks(); 
 	%>
 	<div class="container">
-		<div class="col" align="left">
+		<div class="row">
 			<%
 				for(int i=0; i<listOfBooks.size(); i++) {
 					Book book = listOfBooks.get(i);
 			%>
 			<div class="col-md-10">
+<<<<<<< HEAD
+				<h4>[<%=book.getCategory() %>] <%=book.getName() %></h4>
+				<%=book.getDescription() %>
+				<p><%=book.getAuthor() %> | <%=book.getPublisher() %> | <%=book.getUnitPrice() %>원
+			</div>
+			
+			<div class="col-md-2">
+				<a href="./book.jsp?id=<%=book.getBookId() %>"
+					class="btn btn-secondary" role="button"> 상세 정보 &raquo;</a>
+=======
 				<h3><%=book.getName() %></h3>
 				<p><%=book.getDescription() %>
 				<p><%=book.getUnitPrice() %>원
 				<p> <a href="./book.jsp?id=<%=book.getBookId() %>"
 				class="btn btn-secondary" role="button"> 상세 정보 &raquo;</a>
+>>>>>>> refs/remotes/origin/master
 			</div>
 			<%
 				}

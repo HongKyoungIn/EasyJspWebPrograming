@@ -13,6 +13,18 @@
 	<jsp:include page="menu.jsp"></jsp:include>
 	<div class="jumbotron">
 		<div class="container">
+<<<<<<< HEAD
+			<h1 class="display-3">도서 정보</h1>
+		</div>
+	</div>
+	<%
+		String id = request.getParameter("id");
+		Book book = bookDAO.getBookById(id);
+	%>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+=======
 			<h1 class="display-3">상품 정보</h1>
 		</div>
 	</div>
@@ -23,6 +35,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
+>>>>>>> refs/remotes/origin/master
 				<h3><%=book.getCategory() + " " + book.getName()%></h3>
 				<p><%=book.getDescription() %>
 				<p> <b>도서 코드 : </b><span class="badge badge-danger">

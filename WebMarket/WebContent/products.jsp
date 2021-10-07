@@ -6,6 +6,30 @@
 <!DOCTYPE html>
 <html>
 <head>
+<<<<<<< HEAD
+<link rel="stylesheet" href="css/bootstrap.min.css?ver=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width", initial-scale="1">
+<title>상품 목록</title>
+</head>
+<body>
+	<jsp:include page="menu.jsp" />
+	<div class="jumbotron">
+		<div class="container">
+			<h1 class="display-3">상품 목록</h1>
+		</div>
+	</div>
+	<%
+		ArrayList<Product> listOfProducts = productDAO.getAllProducts();
+	%>
+	<div class="container">
+		<div class="row" align="center">
+			<%
+				for(int i=0; i<listOfProducts.size(); i++) {
+					Product product = listOfProducts.get(i);
+			%>
+			<div class="col-md">
+=======
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <meta charset="UTF-8">
 <title>상품 목록</title>
@@ -27,6 +51,7 @@
 					Product product = listOfProducts.get(i);
 			%>
 			<div class="col-md-4">
+>>>>>>> refs/remotes/origin/master
 				<h3><%=product.getPname() %></h3>
 				<p><%=product.getDescription() %>
 				<p><%=product.getUnitPrice() %>원
